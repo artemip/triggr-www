@@ -95,7 +95,34 @@ img {
 
 #email_signup {
     padding-top: 34px;
-    padding-bottom: 34px;
+    padding-bottom: 64px;
+}
+
+#signup_text {
+    float: left;
+    height: 50px;
+    width: 250px;
+    border: 2px solid transparent;
+    border-radius: 5 0 0 5;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #aaaaaa;
+}
+
+#signup_button {
+    float: left;
+    height: 50px;
+    width: 95px;
+    border: 2px solid transparent;
+    background-color: #2762cb;
+    border-radius: 0 5 5 0;
+    font-size: 16px;
+}
+
+#signup_button:hover {
+    cursor: hand;
+    background-color: #204fa1;
 }
 
 #seperator {
@@ -105,6 +132,15 @@ img {
 
 #download_links {
     margin: auto;
+}
+
+.download_link {
+    opacity: 0.6;
+}
+
+.download_link:hover {
+    opacity: 1.0;
+    cursor: hand;
 }
 
 #android_link {
@@ -196,6 +232,11 @@ img {
     float: left;
 }
 
+.contact_link:hover {
+    cursor: hand;
+    color: #2374b0 !important;
+}
+
 #copyright {
     float: right;
 }
@@ -247,6 +288,11 @@ img {
 .video_sub_section {
     float: left;
     width: 37%;
+}
+
+.flowplayer {
+   width: 260px;
+   height: 128px;
 }
 
 .heading {
