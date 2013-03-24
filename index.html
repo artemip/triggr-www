@@ -4,9 +4,9 @@
     <link href='//fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
 	<link rel="icon" type="image/ico" href="images/favicon.ico" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
     <script src="http://releases.flowplayer.org/5.3.2/flowplayer.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://releases.flowplayer.org/5.3.2/skin/minimalist.css" />
+    <link rel="stylesheet" type="text/css" href="http://releases.flowplayer.org/5.3.2/skin/minimalist.css" /> -->
 </head>
 <body>
 	<div id="main">
@@ -21,8 +21,17 @@
                         when you make or receive a phone call.
                     </div>
                     <div id="email_signup">
-                        <form>
-                            <input id="signup_text" type="text" onclick="document.getElementById('signup_text').value = '';" value="Sign up for launch info"/>
+                        <form action="http://triggrapp.us6.list-manage.com/subscribe/post">
+                            <input type="hidden" name="u" value="585f5612f7">
+                            <input type="hidden" name="id" value="755d6fff05">
+                            <input id="signup_text"
+                                   type="email"
+                                   autocapitalize="off"
+                                   autocorrect="off"
+                                   name="MERGE0"
+                                   id="MERGE0"
+                                   onclick="document.getElementById('signup_text').value = '';"
+                                   value="Sign up for launch info"/>
                             <input id="signup_button" type="submit" class="text" value="SEND" />
                         </form>
                     </div>
@@ -104,11 +113,11 @@
         <div class="section_background solid_background">
             <div id="video_section" class="section">
                 <span class="video_sub_section">
-                    <<div class="flowplayer">
+                    <!--<div class="flowplayer">
                         <video>
                             <source type="video/mp4" src="videos/video_gaming.mp4"/>
                         </video>
-                   </div>
+                   </div>-->
                 </span>
                 <span id="video_description" class="video_sub_section">
                     <div class="heading text">
