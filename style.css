@@ -135,12 +135,14 @@ img {
 }
 
 .download_link {
-    opacity: 0.6;
+    opacity: 0.3;
 }
 
 .download_link:hover {
+    /*
     opacity: 1.0;
-    cursor: hand;
+    */
+    cursor: wait;
 }
 
 #android_link {
@@ -200,8 +202,8 @@ img {
 #video_section {
     min-height: 270px;
     padding-top: 60px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
 }
 
 #video_image {
@@ -210,6 +212,8 @@ img {
 
 #footer {
     height: 114px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 #footer_background {
@@ -292,7 +296,7 @@ img {
 
 .video_sub_section {
     float: left;
-    width: 37%;
+    width: 50%;
 }
 
 .flowplayer {
