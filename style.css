@@ -192,6 +192,9 @@ img {
 
 #details_section {
     min-height: 380px;
+    display: inline-block;
+    margin: auto;
+    padding-left: 60px;
 }
 
 #video_section {
@@ -266,6 +269,8 @@ img {
 .feature_section {
     float: left;
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .feature_icon > img {
