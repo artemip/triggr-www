@@ -2,7 +2,7 @@
 <head>
     <title>Triggr</title>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css' />
-	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
 	<link rel="icon" type="image/ico" href="images/favicon.ico" />
     <!-- start Mixpanel -->
     <script type="text/javascript">
@@ -15,9 +15,12 @@ mixpanel.init("9e4dfce4228cce344aa8d3b65246e894");
     mixpanel.track('Page loaded');
     </script>
     <!-- end Mixpanel -->
-<!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-    <script src="http://releases.flowplayer.org/5.3.2/flowplayer.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://releases.flowplayer.org/5.3.2/skin/minimalist.css" /> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="shadowbox/shadowbox.css">
+    <script type="text/javascript" src="shadowbox/shadowbox.js"></script>
+    <script type="text/javascript">
+        Shadowbox.init();
+    </script>
 </head>
 <body>
 	<div id="main">
@@ -51,16 +54,18 @@ mixpanel.init("9e4dfce4228cce344aa8d3b65246e894");
                     </div>
                     <div id="download_links">
                         <span id="android_link">
-                            <!-- href="http://bit.ly/7JJSz8" -->
+                            <!-- href="http://bit.ly/7JJSz8"
                             <a onclick="mixpanel.track('Android download');" class="download_link">
                                 <img id="android_link_image" src="images/mobile_download_hover.png" alt="" />
                             </a>
+                            -->
                         </span>
                         <span id="windows_link">
-                            <!-- href="http://bit.ly/7JJSz8" -->
+                            <!-- href="http://bit.ly/7JJSz8"
                             <a onclick="mixpanel.track('Windows download');" class="download_link">
                                 <img id="windows_link_image" src="images/pc_download_hover.png" alt="" />
                             </a>
+                            -->
                         </span>
                     </div>
                 </span>
@@ -128,13 +133,11 @@ mixpanel.init("9e4dfce4228cce344aa8d3b65246e894");
         <div class="section_background solid_background">
             <div id="video_section" class="section">
                 <span class="video_sub_section">
-                    <!--<div class="flowplayer">
-                        <video>
-                            onclick="mixpanel.track('Video played');"
-                            <source type="video/mp4" src="videos/video_gaming.mp4"/>
-                        </video>
-                   </div>-->
-                   <img src="images/graphic_video.png" />
+                    <div class="video_player">
+                        <a onclick="mixpanel.track('Video played');" href="videos/video_gaming.mp4" rel="shadowbox;width=1024">
+                           <img src="images/graphic_video.png" />
+                        </a>
+                   </div>
                 </span>
                 <span id="video_description" class="video_sub_section">
                     <div class="heading text">
@@ -151,11 +154,12 @@ mixpanel.init("9e4dfce4228cce344aa8d3b65246e894");
             <div id="footer" class="section">
                 <span id="contact_info" class="text">
                     Follow us:
-                    <a onclick="mixpanel.track('Facebook link clicked');" class="contact_link">Facebook </a>
-                    <a onclick="mixpanel.track('Twitter link clicked');" class="contact_link">Twitter </a>
-                    <a onclick="mixpanel.track('Tumblr link clicked');" class="contact_link">Tumblr </a>
-                    <a onclick="mixpanel.track('Dribbble link clicked');" class="contact_link">Dribbble </a>
-                    <a onclick="mixpanel.track('Blog link clicked');" class="contact_link">Blog </a>
+                    <a href="http://www.facebook.com/TriggrApp" onclick="mixpanel.track('Facebook link clicked');" class="contact_link">Facebook </a>
+                    <a href="mailto:triggr.info@fether.co" onclick="mixpanel.track('Email link clicked');" class="contact_link">Email </a>
+                    <!--<a onclick="mixpanel.track('Twitter link clicked');" class="contact_link">Twitter </a>-->
+                    <!--<a onclick="mixpanel.track('Tumblr link clicked');" class="contact_link">Tumblr </a>-->
+                    <!--<a onclick="mixpanel.track('Dribbble link clicked');" class="contact_link">Dribbble </a>-->
+                    <!--<a onclick="mixpanel.track('Blog link clicked');" class="contact_link">Blog </a>-->
                 </span>
                 <span id="copyright" class="text">
                     &copy; 2013 Fether Technologies, Inc.

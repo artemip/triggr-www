@@ -12,6 +12,10 @@ html {
 	width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 a img {
 	border-style: none;
 	border: 0;
@@ -297,11 +301,6 @@ img {
 .video_sub_section {
     float: left;
     width: 50%;
-}
-
-.flowplayer {
-   width: 260px;
-   height: 128px;
 }
 
 .heading {
