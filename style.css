@@ -144,9 +144,7 @@ img {
 }
 
 .download_link:hover {
-    /*
     opacity: 1.0;
-    */
     cursor: wait;
 }
 
@@ -178,7 +176,7 @@ img {
 }
 
 #laptop_image {
-    top: 80px;
+    top: 50px;
     left: -40px;
     position: absolute;
     z-index: 1;
