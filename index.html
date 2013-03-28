@@ -19,7 +19,13 @@ mixpanel.init("9e4dfce4228cce344aa8d3b65246e894");
     <link rel="stylesheet" type="text/css" href="shadowbox/shadowbox.css">
     <script type="text/javascript" src="shadowbox/shadowbox.js"></script>
     <script type="text/javascript">
-        Shadowbox.init();
+		var opts = {
+			players: ['swf'],
+			ext: {
+				flv: ['flv','mp4']
+			}
+		};
+        Shadowbox.init(opts);
     </script>
 </head>
 <body>
@@ -134,7 +140,8 @@ mixpanel.init("9e4dfce4228cce344aa8d3b65246e894");
             <div id="video_section" class="section">
                 <span class="video_sub_section">
                     <div class="video_player">
-                        <a onclick="mixpanel.track('Video played');" href="videos/video_gaming.mp4" rel="shadowbox;width=1024">
+	<!-- onclick="mixpanel.track('Video played');" -->
+                        <a href="videos/video_gaming.mp4" rel="shadowbox;width=1024;height=574;player=flv">
                            <img src="images/graphic_video.png" />
                         </a>
                    </div>
