@@ -14,7 +14,7 @@
     mixpanel.track('Page loaded');
 	mixpanel.track_links("#facebook_link", "Facebook link clicked");
 	mixpanel.track_links("#email_link", "Email link clicked");
-	mixpanel.track_links("#signup_button", "Signup button clicked");
+	mixpanel.track_links("#signup_form", "Signup form submitted");
 	mixpanel.track_links("#android_download_link", "Android download");
 	mixpanel.track_links("#windows_download_link", "Windows download");
     </script>
@@ -45,7 +45,7 @@
                         when you make or receive a phone call.
                     </div>
                     <div id="email_signup">
-                        <form action="http://triggrapp.us6.list-manage.com/subscribe/post">
+                        <form id="signup_form" action="http://triggrapp.us6.list-manage.com/subscribe/post">
                             <input type="hidden" name="u" value="585f5612f7">
                             <input type="hidden" name="id" value="755d6fff05">
                             <input id="signup_text"
@@ -55,8 +55,8 @@
                                    name="MERGE0"
                                    id="MERGE0"
                                    onclick="document.getElementById('signup_text').value = '';"
-                                   value="Sign up for launch info"/>
-                            <input id="signup_button" type="submit" class="text" value="SEND" />
+                                   value="your.email@example.com"/>
+                            <input id="signup_button" type="submit" class="text" value="SIGN_UP" />
                         </form>
                     </div>
                     <div id="seperator">
