@@ -230,7 +230,7 @@ img {
 }
 
 #footer > span {
-    margin-top: 30px;
+    margin-top: 10px;
     color: #bdbdbd;
 }
 
@@ -249,7 +249,12 @@ img {
 }
 
 #copyright {
-    float: right;
+    float: right;	
+}
+
+#partners {
+	float: right; 
+	padding-top: 16px;
 }
 
 .section_background {
