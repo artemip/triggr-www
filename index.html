@@ -12,6 +12,11 @@
 	
     //Track pageload event
     mixpanel.track('Page loaded');
+	mixpanel.track_links("#facebook_link", "Facebook link clicked");
+	mixpanel.track_links("#email_link", "Email link clicked");
+	mixpanel.track_links("#signup_button", "Signup button clicked");
+	mixpanel.track_links("#android_download_link", "Android download");
+	mixpanel.track_links("#windows_download_link", "Windows download");
     </script>
     <!-- end Mixpanel -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
@@ -51,7 +56,7 @@
                                    id="MERGE0"
                                    onclick="document.getElementById('signup_text').value = '';"
                                    value="Sign up for launch info"/>
-                            <input id="signup_button" onclick="mixpanel.track('Signup button clicked');" type="submit" class="text" value="SEND" />
+                            <input id="signup_button" type="submit" class="text" value="SEND" />
                         </form>
                     </div>
                     <div id="seperator">
@@ -60,14 +65,14 @@
                     <div id="download_links">
                         <span id="android_link">
                             <!-- href="http://bit.ly/7JJSz8"
-                            <a onclick="mixpanel.track('Android download');" class="download_link">
+                            <a id="android_download_link" class="download_link">
                                 <img id="android_link_image" src="images/mobile_download_hover.png" alt="" />
                             </a>
                             -->
                         </span>
                         <span id="windows_link">
                             <!-- href="http://bit.ly/7JJSz8"
-                            <a onclick="mixpanel.track('Windows download');" class="download_link">
+                            <a id="windows_download_link" class="download_link">
                                 <img id="windows_link_image" src="images/pc_download_hover.png" alt="" />
                             </a>
                             -->
@@ -159,12 +164,8 @@
             <div id="footer" class="section">
                 <span id="contact_info" class="text">
                     Contact us:
-                    <a href="http://www.facebook.com/TriggrApp" onclick="mixpanel.track('Facebook link clicked');" class="contact_link">Facebook </a>
-                    <a href="mailto:triggr.info@fether.co" onclick="mixpanel.track('Email link clicked');" class="contact_link">Email </a>
-                    <!--<a onclick="mixpanel.track('Twitter link clicked');" class="contact_link">Twitter </a>-->
-                    <!--<a onclick="mixpanel.track('Tumblr link clicked');" class="contact_link">Tumblr </a>-->
-                    <!--<a onclick="mixpanel.track('Dribbble link clicked');" class="contact_link">Dribbble </a>-->
-                    <!--<a onclick="mixpanel.track('Blog link clicked');" class="contact_link">Blog </a>-->
+                    <a id="facebook_link" href="http://www.facebook.com/TriggrApp" class="contact_link">Facebook </a>
+                    <a id="email_link" href="mailto:triggr.info@fether.co" class="contact_link">Email </a>
                 </span>
 				<span id="copyright">
 					<div class="text">

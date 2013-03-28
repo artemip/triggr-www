@@ -14,6 +14,7 @@ html {
 
 a {
     text-decoration: none;
+	vertical-align: bottom;
 }
 
 a img {
@@ -234,18 +235,18 @@ img {
     color: #bdbdbd;
 }
 
-#footer > span > a {
-    color: #6e6e6e;
-    margin-left: 8px;
-}
-
-#contact_info {
-    float: left;
+.contact_link {
+   color: #6e6e6e;
+   margin-left: 8px;	
 }
 
 .contact_link:hover {
     cursor: hand;
     color: #2374b0 !important;
+}
+
+#contact_info {
+    float: left;
 }
 
 #copyright {
