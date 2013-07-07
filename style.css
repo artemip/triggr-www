@@ -161,6 +161,7 @@ img {
     left: 60px;
     position: absolute;
     z-index: 1;
+    opacity: 0;
 }
 
 #description_section {
@@ -234,7 +235,7 @@ img {
 
 .contact_link {
    color: #6e6e6e;
-   margin-left: 8px;	
+   margin-left: 8px;
 }
 
 .contact_link:hover {
@@ -247,11 +248,11 @@ img {
 }
 
 #copyright {
-    float: right;	
+    float: right;
 }
 
 #partners {
-	float: right; 
+	float: right;
 	padding-top: 16px;
 }
 
