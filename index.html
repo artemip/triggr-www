@@ -81,14 +81,15 @@
                     </div>
                 </span>
                 <span id="phone_image_div" class="right_section">
-                    <img id="phone_image" onload="fadeInAndSlide(this);" src="images/graphic_phone.png" alt="" />
+                    <img id="phone_image" onload="var _this = this; setTimeout(function(){ fadeInAndSlide(_this, 'left') }, 500);" src="images/graphic_phone.png" alt="" />
                 </span>
             </div>
 	    </div>
         <div class="section_background solid_background">
             <div id="description_section" class="section">
                 <span id="laptop_image_div" class="left_section">
-                    <img id="laptop_image" src="images/laptop.png" alt=""/>
+                    <!-- <img id="laptop_image" onload="var _this = this; setTimeout(function(){ fadeInAndSlide(_this, 'right') }, 500);" src="images/laptop.png" alt=""/> -->
+					<img id="laptop_image" src="images/laptop.png" alt=""/>
                 </span>
                 <span id="description_section" class="right_section">
                     <div id="tagline" class="heading text">
