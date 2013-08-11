@@ -178,6 +178,8 @@ img {
 #laptop_image {
     top: 50px;
     left: -40px;
+	height: 395px;
+	width: 561px;
     position: absolute;
     z-index: 1;
 }
