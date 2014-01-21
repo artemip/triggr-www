@@ -34,20 +34,39 @@ Do the following if you're using your customized build of modernizr (http://www.
 <![endif]-->
 
 <!-- start Mixpanel -->
-<!--	<script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
-	typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,
-	e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+<script type="text/javascript">
+	(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,
+e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
 	mixpanel.init("9e4dfce4228cce344aa8d3b65246e894"); 
 
-    //Track pageload event
-    mixpanel.track('Page loaded');
-	mixpanel.track_links("#facebook_link", "Facebook link clicked");
+	//Track pageload event
+	mixpanel.track('Page loaded');
+	mixpanel.track_links("#featureandroid", "Android download");
+	mixpanel.track_links("#featurewindows", "Windows download");
+	
+	mixpanel.track_links("#play", "Video played");
+	
+	mixpanel.track_forms("#signup_text_top", "Signup form clicked (Top)");
+	mixpanel.track_forms("#signup_button_top", "Signup form submitted (Top)");
+	mixpanel.track_forms("#signup_text_bottom", "Signup form clicked (Bottom));
+	mixpanel.track_forms("#signup_button_bottom", "Signup form submitted (Bottom)");
+	
+	mixpanel.track_links("#download_android_full", "Lower Android download (Full)");
+	mixpanel.track_links("#download_android_trial", "Lower Android download (Trial)");
+	mixpanel.track_links("#download_windows", "Lower Windows download");
+	
+	mixpanel.track_links("#help_link", "Help link clicked");
+	
+	mixpanel.track_links("#facebook", "Facebook link clicked");
 	mixpanel.track_links("#email_link", "Email link clicked");
-	mixpanel.track_links("#blog_link", "Blog link clicked");
-	mixpanel.track_links("#android_download_link", "Android download");
-	mixpanel.track_links("#windows_download_link", "Windows download");
-	mixpanel.track_forms("#signup_form", "Signup form submitted");
-    </script> -->
+	mixpanel.track_links("#blog", "Blog link clicked");
+	
+	mixpanel.track_links("#share_facebook", "Facebook share clicked");
+	mixpanel.track_links("#share_twitter", "Twitter share clicked");
+	mixpanel.track_links("#share_googleplus", "Google+ share clicked");
+	
+</script>
     <!-- end Mixpanel --> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="shadowbox/shadowbox.css">
@@ -191,15 +210,22 @@ $(function() {
                         <form id="signup_form" action="http://triggrapp.us6.list-manage.com/subscribe/post">
                             <input type="hidden" name="u" value="585f5612f7">
                             <input type="hidden" name="id" value="755d6fff05">
-                            <input id="signup_text"
-                                   type="email"
-                                   autocapitalize="off"
-                                   autocorrect="off"
-                                   name="MERGE0"
-                                   id="MERGE0"
-                                   onclick="document.getElementById('signup_text').value = '';"
-                                   value="your.email@example.com"/>
-                            <input id="signup_button" type="submit" class="text" value="Sign up" title="Join our mailing list" />
+                            <input 
+								id="signup_text_top"
+								class="signup_text"
+								type="email"
+								autocapitalize="off"
+								autocorrect="off"
+								name="MERGE0"
+								id="MERGE0"
+								onclick="document.getElementById('signup_text').value = '';"
+								value="your.email@example.com"/>
+                            <input 
+								id="signup_button_top" 
+								class="text signup_button"
+								type="submit"  
+								value="Sign up" 
+								title="Join our mailing list" />
                         </form>
         </div>
   </div>
@@ -247,15 +273,15 @@ $(function() {
         	<div class="ddiv">
             	<div id="androidicon"></div>
                <div class="download_text">TRIGGR  for Android</div>
-               <a title="Download Triggr for Android" href="https://play.google.com/store/apps/details?id=co.fether.triggr"><div class="download_button">BUY - $1.99</div></a>
-               <a title="Download Triggr for Android" href="https://play.google.com/store/apps/details?id=co.fether.triggrtrial"><div class="download_button" id="download_button2">FREE TRIAL (30 days)</div></a>
+               <a title="Download Triggr for Android" href="https://play.google.com/store/apps/details?id=co.fether.triggr"><div class="download_button" id="download_android_full">BUY - $1.99</div></a>
+               <a title="Download Triggr for Android" href="https://play.google.com/store/apps/details?id=co.fether.triggrtrial"><div class="download_button" id="download_android_trial">FREE TRIAL (30 days)</div></a>
            </div>
        </li>
        <li>
        		<div class="ddiv">
             	<div id="windowsicon"></div>
                <div class="download_text">TRIGGR  for Windows</div>
-               <a title="Download Triggr for Windows" href="download/TriggrSetup.exe"><div class="download_button">FREE DOWNLOAD</div></a>
+               <a title="Download Triggr for Windows" href="download/TriggrSetup.exe"><div class="download_button" id="download_windows">FREE DOWNLOAD</div></a>
            </div>
        </li>
     </ul>
@@ -270,7 +296,7 @@ $(function() {
            <div id="helpicon"></div>
            <div class="help_text">Need help installing or getting started with TRIGGR?
                <br>
-               <a title="Get support and help" href="documentation/index.html">Click here for instructions.</a>
+               <a id="" title="Get support and help" href="documentation/index.html">Click here for instructions.</a>
            </div>
        </div>
   </div>
@@ -320,19 +346,26 @@ $(function() {
         	Be the first to know when TRIGGR has updates.
         </div>
         <div id="email_signup">
-                        <form id="signup_form" action="http://triggrapp.us6.list-manage.com/subscribe/post">
-                            <input type="hidden" name="u" value="585f5612f7">
-                            <input type="hidden" name="id" value="755d6fff05">
-                            <input id="signup_text"
-                                   type="email"
-                                   autocapitalize="off"
-                                   autocorrect="off"
-                                   name="MERGE0"
-                                   id="MERGE0"
-                                   onclick="document.getElementById('signup_text').value = '';"
-                                   value="your.email@example.com"/>
-                            <input id="signup_button" type="submit" class="text" value="Sign up" title="Join our mailing list" />
-                        </form>
+			<form id="signup_form" action="http://triggrapp.us6.list-manage.com/subscribe/post">
+				<input type="hidden" name="u" value="585f5612f7">
+				<input type="hidden" name="id" value="755d6fff05">
+				<input 
+					id="signup_text_bottom"
+					class="signup_text"
+					type="email"
+					autocapitalize="off"
+					autocorrect="off"
+					name="MERGE0"
+					id="MERGE0"
+					onclick="document.getElementById('signup_text').value = '';"
+					value="your.email@example.com"/>
+				<input 
+					id="signup_button_bottom" 
+					class="text signup_button" 
+					type="submit"
+					value="Sign up" 
+					title="Join our mailing list" />
+			</form>
         </div>
   </div>
   <!-- footer section -->
