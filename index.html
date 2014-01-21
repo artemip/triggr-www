@@ -1,18 +1,43 @@
-<html xmlns="http://www.w3.org/1999/xhtml" >
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
 <head>
-    <title>Triggr</title>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:600,400,300' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
-	<link rel="icon" type="image/ico" href="images/favicon.ico" />
+<meta charset="UTF-8">
+<!--Facebook-->
+<meta name="title" content="TRIGGR App" />
+<meta name="description" content="Mobile Notifications on your Desktop" />
+<link rel="image_src" href="both_main.png" / >
+<!--end Facebook -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Triggr, , TRIGGR, Fether, technologies, technology, android, app, mobile, UI, UX, windows, application, software, Warren, Lebovics, Artem, Artem Pasyechnyk, connect, device, automatic, self adjusting, notifications, alerts, smartphone, desktop, tablet">-->
+<meta name="copyright" content="Copyright (c) Fether Technologies 2013.">
+<title>TRIGGR | Mobile notifications on your desktop</title>
+<link href="boilerplate.css" rel="stylesheet" type="text/css">
+<link href="triggrv2.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="images/favicon.ico">
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
 
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 
-	<!-- start Mixpanel -->
-	<script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+<!-- start Mixpanel -->
+<!--	<script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
 	typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,
 	e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
-	mixpanel.init("9e4dfce4228cce344aa8d3b65246e894");
+	mixpanel.init("9e4dfce4228cce344aa8d3b65246e894"); 
 
     //Track pageload event
     mixpanel.track('Page loaded');
@@ -22,9 +47,10 @@
 	mixpanel.track_links("#android_download_link", "Android download");
 	mixpanel.track_links("#windows_download_link", "Windows download");
 	mixpanel.track_forms("#signup_form", "Signup form submitted");
-    </script>
-    <!-- end Mixpanel -->
-    <link rel="stylesheet" type="text/css" href="shadowbox/shadowbox.css">
+    </script> -->
+    <!-- end Mixpanel --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="shadowbox/shadowbox.css">
     <script type="text/javascript" src="shadowbox/shadowbox.js"></script>
     <script type="text/javascript">
 		var opts = {
@@ -35,22 +61,133 @@
 		};
         Shadowbox.init(opts);
     </script>
-    <script type="text/javascript" src="js/triggr-www.js"></script>
+<script src="respond.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<link rel="stylesheet" href="colorbox.css" />
+<script src="jquery.colorbox-min.js"></script>
+<!-- Script for smooth scrolling -->
+<script>
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 500);
+        return false;
+      }
+    }
+  });
+});
+</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+</script>
+<!--<script>
+
+			$(document).ready(function(){
+				//Examples of how to assign the Colorbox event to elements
+				$(".group1").colorbox({rel:'group1'});
+				$(".group2").colorbox({rel:'group2', transition:"fade"});
+				$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+				$(".group4").colorbox({rel:'group4', slideshow:true});
+				$(".ajax").colorbox();
+				$(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
+				$(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
+				$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+				$(".inline").colorbox({inline:true, width:"50%"});
+				$(".callbacks").colorbox({
+					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+				});
+
+				$('.non-retina').colorbox({rel:'group5', transition:'none'})
+				$('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
+				
+				//Example of preserving a JavaScript event for inline calls.
+				$("#click").click(function(){ 
+					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+					return false;
+				});
+			});
+		
+</script>
+<script>
+  $('.video_layer').colorbox({iframe:true, escKey:true, width:"625px", height:"352"});
+</script> -->
 </head>
 <body>
-	<!--[if lt IE 10]>  <div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>    <div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>    <div style='width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>      <div style='width: 75px; float: left;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-warning.jpg' alt='Warning!'/></div>      <div style='width: 275px; float: left; font-family: Arial, sans-serif;'>        <div style='font-size: 14px; font-weight: bold; margin-top: 12px;'>You are using an outdated browser</div>        <div style='font-size: 12px; margin-top: 6px; line-height: 12px;'>For a better experience using this site, please upgrade to a modern web browser.</div>      </div>      <div style='width: 75px; float: left;'><a href='http://www.firefox.com' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-firefox.jpg' style='border: none;' alt='Get Firefox 3.5'/></a></div>      <div style='width: 75px; float: left;'><a href='http://www.browserforthebetter.com/download.html' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-ie8.jpg' style='border: none;' alt='Get Internet Explorer 8'/></a></div>      <div style='width: 73px; float: left;'><a href='http://www.apple.com/safari/download/' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-safari.jpg' style='border: none;' alt='Get Safari 4'/></a></div>      <div style='float: left;'><a href='http://www.google.com/chrome' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-chrome.jpg' style='border: none;' alt='Get Google Chrome'/></a></div>    </div>  </div>  <![endif]-->
-	<div id="main">
-	    <div class="section_background top_blue_background">
-            <div id="title_section" class="section">
-                <span id="title_text_section" class="left_section">
-                    <div id="title">
-                        <img id="logo_image" src="images/title.png" alt="" />
-                    </div>
-                    <div id="headline" class="text">
-                        Triggr adjusts your computer's volume
-                        when you make or receive a phone call.
-                    </div>
-                    <div id="email_signup">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="gridContainer clearfix">
+  <!-- header -->
+  <div id="header">
+    <nav>
+    	<ul>
+        	<a id="header_logo" href="http://www.ongoaldesign.com"><li id="li_logo">
+            TRIGGR 
+           </li></a>
+           <a class="nav_text" href="#features"><li>
+            FEATURES
+           </li></a>
+           <a class="nav_text" href="#download"><li>
+            DOWNLOAD
+           </li></a>
+           <a class="nav_text" href="#help"><li>
+            HELP
+           </li></a>
+           <a class="nav_text" href="#contact"><li>
+            CONTACT
+           </li></a>
+           <a id="header_top" href="#top_section" title="Go to top"><li id="li_gotop">
+            GO TO TOP
+           </li></a>
+        </ul>
+    </nav>
+    <!-- only in mobile -->
+    <div id="mobileheader"></div>
+  </div>
+  <!-- top section -->
+  <div id="top_section">
+  	<div class="section_device">
+    	<div id="tagline">Mobile notifications on your desktop.</div>
+        <div id="featuredownload">
+        <ul>
+            	<li>
+                  <a title="Download Triggr for Windows" href="download/TriggrSetup.exe"><div id="featurewindows">
+                    	<img src="images/windowsdownload.png"/>
+                    	TRIGGR for Windows
+                  </div></a>
+              </li>
+              <li>
+                  <a title="Download Triggr for Android" href="https://play.google.com/store/apps/details?id=co.fether.triggr"><div id="featureandroid">
+                  	<img src="images/androiddownload.png"/>
+                    	TRIGGR for Android
+                  </div></a>
+              </li>
+           </ul>
+        </div>
+        <div id="featurephone">
+        	<img src="images/featurephone.png"/>
+        </div>
+    </div>
+  </div>
+  <!-- signup section -->
+  <div id="email">
+        <div id="emailsub" class="regtext">
+        	Want to know when TRIGGR  has updates?
+        </div>
+        <div id="email_signup">
                         <form id="signup_form" action="http://triggrapp.us6.list-manage.com/subscribe/post">
                             <input type="hidden" name="u" value="585f5612f7">
                             <input type="hidden" name="id" value="755d6fff05">
@@ -62,125 +199,154 @@
                                    id="MERGE0"
                                    onclick="document.getElementById('signup_text').value = '';"
                                    value="your.email@example.com"/>
-                            <input id="signup_button" type="submit" class="text" value="SIGN UP" />
+                            <input id="signup_button" type="submit" class="text" value="Sign up" title="Join our mailing list" />
                         </form>
-                    </div>
-                    <div id="seperator">
-                        <img id="seperator_image" src="images/seperator.png" alt="" />
-                    </div>
-                    <div id="download_links">
-                        <span id="android_link">
-                            <a id="android_download_link" href="https://play.google.com/store/apps/details?id=co.fether.triggr" class="download_link">
-                                <img id="android_link_image" src="images/mobile_download_hover.png" alt="" />
-                            </a>
-                        </span>
-                        <span id="windows_link">
-                            <a id="windows_download_link" href="download/TriggrSetup.exe" class="download_link">
-                                <img id="windows_link_image" src="images/pc_download_hover.png" alt="" />
-                            </a>
-                        </span>
-                    </div>
-                </span>
-                <span id="phone_image_div" class="right_section">
-                    <img id="phone_image" onload="var _this = this; setTimeout(function(){ fadeInAndSlide(_this, 'left') }, 500);" src="images/graphic_phone.png" alt="" />
-                </span>
-            </div>
-	    </div>
-        <div class="section_background solid_background">
-            <div id="description_section" class="section">
-                <span id="laptop_image_div" class="left_section">
-                    <!-- <img id="laptop_image" onload="var _this = this; setTimeout(function(){ fadeInAndSlide(_this, 'right') }, 500);" src="images/laptop.png" alt=""/> -->
-					<img id="laptop_image" src="images/laptop.png" alt=""/>
-                </span>
-                <span id="description_section" class="right_section">
-                    <div id="tagline" class="heading text">
-                        Hear the phone, <br /> not the noise
-                    </div>
-                    <div id="more_details" class="text">
-                        On top of smart volume control, receive phone status notifications on your PC.
-                        <br /><br />
-                        You'll never miss a call again.
-                    </div>
-                </span>
-            </div>
         </div>
-        <div class="section_background bottom_blue_background">
-            <div class="section">
-                <span id="details_section">
-                    <span class="feature_section">
-                        <div class="feature_icon">
-                            <img id="connect_feature_image" src="images/graphic_connect.png" alt="" />
-                        </div>
-                        <div class="text feature_name">
-                            Stay Better Connected
-                        </div>
-                        <div class="sub_text feature_description">
-                            Pair your devices, and let them talk.
-                        </div>
-                    </span>
-                    <span class="feature_section" style="margin-left: 150px; margin-right: 150px;">
-                        <div class="feature_icon">
-                            <img id="notify_feature_image" src="images/graphic_notify.png" alt="" />
-                        </div>
-                        <div class="text feature_name">
-                            Be Notified
-                        </div>
-                        <div class="sub_text feature_description">
-                            See phone call updates on your PC in real-time.
-                        </div>
-                    </span>
-                    <span class="feature_section">
-                        <div class="feature_icon">
-                            <img id="hear_feature_image" src="images/graphic_hear.png" alt="" />
-                        </div>
-                        <div class="text feature_name">
-                            Hear What's Important
-                        </div>
-                        <div class="sub_text feature_description">
-                            Reactive volume control is triggered when your phone rings.
-                        </div>
-                    </span>
-                </span>
-            </div>
+  </div>
+  <!-- Features anchor  -->
+  <div id="features">
+  </div>
+  <!-- Features section  -->
+  <div id="featuresection">
+  	<ul>
+    	<li>
+        	<div class="fdiv">
+            	<div id="tricon_notification"></div>
+               <div class="tri_big_text">Desktop Notifications</div>
+               <div class="tri_little_text">See notifications from your favorite mobile apps on your desktop.</div>
+           </div>
+       </li>
+       <li>
+       		<div class="fdiv">
+            	<div id="tricon_volume"></div>
+               <div class="tri_big_text">Smart Volume</div>
+               <div class="tri_little_text">Your computer volume will automatically be lowered when making or receiving a phone call.</div>
+           </div>
+       </li>
+       <li>
+       		<div class="fdiv">
+            	<div id="tricon_alert"></div>
+               <div class="tri_big_text">Noise Alerts</div>
+               <div class="tri_little_text">Expecting something urgent? Your computer will notify you with a ping.</div>
+           </div>
+       </li>
+    </ul>
+    <div id="devices">
+    	<a onclick="mixpanel.track('Video played');" href="videos/video_gaming.mp4" rel="shadowbox;width=1024;height=574;player=flv" title="Triggr teaser"><div id="play">
+        	<img src="images/playbutton.png"/>
+        </div></a>
+        <div id="gif"><img src="images/computer2.gif"/></div>
+    </div>
+  </div>
+  <!-- Downloads anchor -->
+  <div id="download"></div>
+  <!-- Downloads content -->
+  <div id="downloadsection">
+  	<ul>
+    	<li>
+        	<div class="ddiv">
+            	<div id="androidicon"></div>
+               <div class="download_text">TRIGGR  for Android</div>
+               <a title="Download Triggr for Android" href="https://play.google.com/store/apps/details?id=co.fether.triggr"><div class="download_button">BUY - $1.99</div></a>
+               <a title="Download Triggr for Android" href="https://play.google.com/store/apps/details?id=co.fether.triggrtrial"><div class="download_button" id="download_button2">FREE TRIAL (30 days)</div></a>
+           </div>
+       </li>
+       <li>
+       		<div class="ddiv">
+            	<div id="windowsicon"></div>
+               <div class="download_text">TRIGGR  for Windows</div>
+               <a title="Download Triggr for Windows" href="download/TriggrSetup.exe"><div class="download_button">FREE DOWNLOAD</div></a>
+           </div>
+       </li>
+    </ul>
+  </div>
+  <!-- Help anchor -->
+  <div id="help"></div>
+  <!-- Help section top -->
+  <div id="helptop">*TRIGGR  will only work if the mobile and desktop apps are both downloaded.</div>
+  <!-- Help section bottom -->
+  <div id="helpbottom">
+  		<div id="hdiv">
+           <div id="helpicon"></div>
+           <div class="help_text">Need help installing or getting started with TRIGGR?
+               <br>
+               <a title="Get support and help" href="documentation/index.html">Click here for instructions.</a>
+           </div>
+       </div>
+  </div>
+  <!-- Contact anchor -->
+  <div id="contact"></div>
+  <!-- Contact section -->
+  <div id="contactsection">
+  		<div class="contact_text">
+        	Get in touch!
+       </div>
+        <div id="socialholder">
+        <ul>
+        	<li>
+            	<a href="http://www.facebook.com/TriggrApp" title="Find us on Facebook!"><div id="facebook">
+                	<img src="images/facebook_icon.png"/>
+              </div></a>
+           </li>
+           <li>
+           	<a href="mailto:triggr.info@fether.co" title="Email us!"><div id="email_link">
+            		<img src="images/mail_icon.png"/>
+            	</div></a>
+          	</li>
+           <li>
+           	<a href="http://blog.fether.co/" title="Visit our blog!"><div id="blog">
+            		<img src="images/blog_icon.png"/>
+            	</div></a>
+           </li>
+       </ul>
+      </div>
+      <div class="contact_text">
+        	Share TRIGGR.
+      </div>
+      <div id="share_holder">
+      	 <!--<div class="fb-share-button" data-href="http://triggrapp.com/" data-width="100" data-type="button"></div>-->
+        <!--<div class="fb-share-button" data-href="http://triggrapp.com/" data-type="link"></div>-->
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.triggrapp.com" target="_blank"><div id="share_facebook">Share on Facebook</div></a>
+          <div class="share"></div>
+          <a href="http://twitter.com/share?url=http://www.triggrapp.com&text=Triggr%20-%20mobile%20notifications%20on%20your%20desktop" target="_blank"><div id="share_twitter">Share on Twitter</div></a>
+          <div class="share"></div>
+          <a href="https://plus.google.com/share?url=http://www.triggrapp.com" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><div id="share_googleplus">Share on Google+</div></a>
+      </div>
+  </div>
+  <!-- signup section -->
+  <div id="email2">
+        <div id="emailsub" class="regtext">
+        	Be the first to know when TRIGGR has updates.
         </div>
-        <div class="section_background solid_background">
-            <div id="video_section" class="section">
-                <span class="video_sub_section">
-                    <div class="video_player">
-                        <a onclick="mixpanel.track('Video played');" href="videos/video_gaming.mp4" rel="shadowbox;width=1024;height=574;player=flv">
-                           <img src="images/graphic_video.png" />
-                        </a>
-                   </div>
-                </span>
-                <span id="video_description" class="video_sub_section">
-                    <div class="heading text">
-                        What can Triggr do for you?
-                    </div>
-                    <div class="text">
-                        <br />
-                        Watch this video to see why hardcore gamers need Triggr!
-                    </div>
-                </span>
-            </div>
+        <div id="email_signup">
+                        <form id="signup_form" action="http://triggrapp.us6.list-manage.com/subscribe/post">
+                            <input type="hidden" name="u" value="585f5612f7">
+                            <input type="hidden" name="id" value="755d6fff05">
+                            <input id="signup_text"
+                                   type="email"
+                                   autocapitalize="off"
+                                   autocorrect="off"
+                                   name="MERGE0"
+                                   id="MERGE0"
+                                   onclick="document.getElementById('signup_text').value = '';"
+                                   value="your.email@example.com"/>
+                            <input id="signup_button" type="submit" class="text" value="Sign up" title="Join our mailing list" />
+                        </form>
         </div>
-        <div id="footer_background" class="section_background">
-            <div id="footer" class="section">
-                <span id="contact_info" class="text">
-                    Contact us:
-                    <a id="facebook_link" href="http://www.facebook.com/TriggrApp" class="contact_link">Facebook </a>
-                    <a id="email_link" href="mailto:triggr.info@fether.co" class="contact_link">Email </a>
-					<a id="blog_link" href="http://blog.fether.co/" class="contact_link">Blog </a>
-                </span>
-				<span id="copyright">
-					<div class="text">
-						&copy; 2013 Fether Technologies, Inc.
-					</div>
-					<div id="partners">
+  </div>
+  <!-- footer section -->
+  <div id="footersection">
+  		<div id="footer_text_top">TRIGGR is designed by Warren Lebovics & developed by Artem Pasyechnyk</div>
+        <br>
+       <div id="footer_text_bottom">© 2013 Fether Technologies, Inc.</div>
+       <br><br>
+       <div id="partners">
 						<a href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
-					</div>
-				</span>
-            </div>
-        </div>
-	</div>
+		</div>
+  </div>
+  
+ 
+</div>
 </body>
 </html>

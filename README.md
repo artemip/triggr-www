@@ -1,4 +1,0 @@
-triggr-www
-==========
-
-Triggr website
